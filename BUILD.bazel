@@ -1,0 +1,10 @@
+load("@test_deps//:requirements.bzl", "requirement")
+load("@io_bazel_rules_python//python:python.bzl", "py_binary")
+
+py_binary(
+    name = "import_test",
+    srcs = ["import_test.py"],
+    deps = [
+        requirement("google-cloud-dataflow"),
+    ],
+)
